@@ -1,0 +1,25 @@
+@media screen and (max-width: 990px) {
+  p img {
+    width: 100vw;
+    margin-left: calc(((100vw - 660px) / 2) * -1);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .post_content textarea {
+    width: 960px;
+    margin-left: -150px;
+  }
+
+  .picture img {
+    width: 960px;
+    margin-left: -150px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  p img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

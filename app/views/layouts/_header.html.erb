@@ -1,0 +1,14 @@
+<header class="header">
+  <ul>
+    <% if current_user %>
+      <li class="blue"><%= current_user.email %></li>
+      <li><%= link_to "New post", new_post_path %></li>
+      <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+      <li>//</li>
+    <% end %>
+    <li><%= link_to "Home", root_url %></li>
+    <li><%= link_to "Work", work_url %></li>
+    <li><%= link_to "Opinions", opinions_path %></li>
+    <li><%= link_to "Experiments", experiments_path %></li>
+  </ul>
+</header>

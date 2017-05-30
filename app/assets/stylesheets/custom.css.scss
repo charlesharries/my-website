@@ -1,0 +1,381 @@
+$pink: #f4859b;
+
+/* Error messages */
+
+#error_explanation {
+  border: 1px solid crimson;
+  padding: 20px;
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      color: crimson;
+      &:before {
+        content: '- ';
+        color: crimson;
+      }
+    }
+  }
+}
+
+.error {
+  font-size: 0.875em;
+  color: crimson;
+}
+
+.alert {
+  color: crimson;
+}
+
+/*
+==========
+General rules
+==========
+*/
+
+body {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 1.15em;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: #333;
+}
+
+hr {
+  width: 15%;
+  margin-left: 0;
+  background-color: #aaa;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: $pink;
+}
+
+li a {
+  color: #333;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    background: $pink;
+    transition: 0.3s ease-in-out;
+    height: 1px;
+    width: 0;
+    &:hover {
+      width: 100%;
+    }
+  }
+}
+
+a:hover {
+  &:after {
+    width: 100%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  letter-spacing: 0.0325em;
+}
+
+h1 {
+  font-size: 4em;
+  letter-spacing: 0.0625em;
+}
+
+h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  letter-spacing: 0.0325em;
+  a {
+    color: #333;
+  }
+}
+
+h3 {
+  font-size: 1.55em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  color: #aaa;
+  font-size: 1.35em;
+}
+
+h6 {
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+p {
+  margin-bottom: 30px;
+  img {
+    max-width: 960px;
+    margin-left: -150px;
+  }
+}
+
+code {
+  font-family: 'Cousine', monospace;
+  font-size: 1em;
+  background: #fafafa;
+  border: 1px solid #f6f6f6;
+  border-radius: 2px;
+  padding: 3px;
+}
+
+pre {
+  font-family: 'Cousine', monospace;
+  font-size: 0.8em;
+  width: 960px;
+  margin-left: -150px;
+  border: 1px solid #f6f6f6;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: #fafafa;
+  border-radius: 2px;
+}
+
+.full-width {
+  max-width: 100vw;
+  margin-left: calc(((100vw - 660px) / 2) * -1);
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+ol {
+  list-style-type: lower-roman;
+  padding-left: 45px;
+  margin-bottom: 30px;
+}
+
+
+/*
+==========
+Home page
+==========
+*/
+
+.content {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  width: 100%;
+  max-width: 960px;
+}
+
+.title {
+  text-align: center;
+  position: relative;
+  img {
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+    border: 0.5px solid $pink;
+  }
+  h1 {
+    position: absolute;
+    top: 32%;
+    right: 0;
+    left: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  margin-top: 50px;
+  ul {
+    display: inline-block;
+    margin: 0 auto;
+    li {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* Show page */
+
+.blog-content {
+  margin-top: 80px;
+}
+
+.post-body {
+  margin-top: 40px;
+}
+
+/* Header */
+
+header {
+  max-width: 960px;
+  margin: 0 auto;
+  ul {
+    margin-top: 15px;
+    text-align: right;
+    li {
+      display: inline-block;
+      font-size: 0.75em;
+      letter-spacing: 0.05em;
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.blue {
+  color: lightblue;
+}
+
+/* Notices */
+
+.notices {
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: left;
+  .notice {
+    color: lightblue;
+
+  }
+  .error {
+    color: crimson;
+  }
+}
+
+/* Post index pages */
+
+.container {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.read-more {
+  font-size: 0.85em;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+
+.form-content {
+  margin-top: 3em;
+  h2 {
+    margin-bottom: 0.5em;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+  label {
+    margin-right: 15px;
+  }
+  input, textarea {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: none;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    letter-spacing: 0.0325em;
+    color: #333;
+  }
+  .post_subtitle input {
+    border-bottom: 1px solid $pink;
+    width: 70%;
+    font-size: 1em;
+  }
+  .post_title input {
+    margin-top: 0.5em;
+    border-bottom: 1px solid $pink;
+    width: 90%;
+    font-size: 3em;
+  }
+  .post_content textarea {
+    box-shadow: inset 0px 0px 25px #e5e5e5;
+    padding: 15px;
+    resize: none;
+    font-family: 'Cousine', monospace;
+    font-size: 0.875em;
+    letter-spacing: 0.0325em;
+    line-height: 1.6;
+    border: 1px solid $pink;
+  }
+}
+
+/* Images */
+
+.picture {
+  margin-bottom: 30px;
+}
+
+/* Footer */
+
+.footer {
+  background: #fafafa;
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-content {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.back-to {
+  height: 60px;
+  padding-top: 20px;
+}
+
+.footer ul {
+  display: flex;
+  li {
+    font-size: 0.75em;
+  }
+  li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.links {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// TODO media queries for less than 990px, so that images within posts don't wind up trailing off the page

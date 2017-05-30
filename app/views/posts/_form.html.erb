@@ -1,0 +1,59 @@
+<%= simple_form_for @post do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= "#{pluralize(@post.errors.count, 'error')} prohibited this post from being saved:" %>
+      </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.input :title, class: "form-control", label: false %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :subtitle, :input_html => { class: "form-control autoExpand" } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :category, :collection => [['opinion', 'opinion'], ['experiment', 'experiment'], ['work', 'work']], prompt: "Choose a category...", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :content, :input_html => { class: "form-control big-textarea", rows: '20', :'data-min-rows' => '20' }, label: false %>
+  </div>
+
+  <div class="form-group">
+    <%= f.file_field :pictures, :multiple => true, accept: 'image/jpeg,image/gif,image/png' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.button :submit %>
+  </div>
+
+  <script>
+    // A little JS to make sure that you don't upload anything too big
+    $('#post_pictures').bind('change', function() {
+
+    });
+
+    const upload_button = document.querySelector('#post_pictures')
+    var files = upload_button.files;
+
+    // upload_button.addEventListener('change', handleChange);
+
+    function handleChange() {
+      Array.from(this.files).forEach(file => {
+        if (file.size/1024/1024 > 5) {
+          alert("All of your files must be smaller than 5MB each. The server's not going to allow you to upload them so might as well change them now.");
+          return;
+        }
+      });
+    }
+  </script>
+<% end %>
