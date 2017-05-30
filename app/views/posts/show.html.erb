@@ -6,13 +6,6 @@
     <div class="post-body">
       <%= markdown(@post.content) %>
     </div>
-    <% if @post.pictures.any? %>
-      <% @post.pictures.each do |picture| %>
-        <div class="picture">
-          <%= image_tag picture %>
-        </div>
-      <% end %>
-    <% end %>
     <% if current_user %>
       <%= link_to "Edit post", edit_post_path(@post) %>
     <% end %>
