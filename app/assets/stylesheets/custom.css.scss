@@ -106,7 +106,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5em;
+  // Using this one for image captions/attributions
+  font-size: 0.55em;
+  color: #aaa;
+  margin-top: -30px;
+  margin-bottom: 30px;
 }
 
 h5 {
@@ -122,7 +126,7 @@ h6 {
 p {
   margin-bottom: 30px;
   img {
-    max-width: 960px;
+    width: 960px;
     margin-left: -150px;
   }
 }
