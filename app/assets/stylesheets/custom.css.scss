@@ -39,7 +39,7 @@ General rules
 body {
   font-family: 'Merriweather', serif;
   font-weight: 300;
-  font-size: 1.15em;
+  font-size: 1em;
   line-height: 1.6;
   letter-spacing: 0.04em;
   color: #333;
@@ -232,7 +232,7 @@ header {
     text-align: right;
     li {
       display: inline-block;
-      font-size: 0.75em;
+      font-size: 0.85em;
       letter-spacing: 0.05em;
       &:not(:first-child) {
         margin-left: 20px;
@@ -357,7 +357,7 @@ header {
 .footer ul {
   display: flex;
   li {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   li:not(:last-child) {
     margin-right: 30px;
