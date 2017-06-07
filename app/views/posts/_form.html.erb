@@ -33,17 +33,20 @@
   </div>
 
   <div class="form-group">
-    <%= f.button :submit %>
+    <%= f.submit "Save post as draft", class: "button save-button" %>
+    <%= f.submit "Publish post", class: "button publish-button" %>
   </div>
 
-  <div class="pictures">
-    <h5>Available pictures:</h5>
-    <ul>
-      <% @post.pictures.each do |picture| %>
-        <li><%= picture.url %></li>
-      <% end %>
-    </ul>
-  </div>
+  <% if @post.pictures.any? %>
+    <div class="available-pictures">
+      <h5>Available pictures:</h5>
+      <ul>
+        <% @post.pictures.each do |picture| %>
+          <li><%= picture.url %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <script>
     // A little JS to make sure that you don't upload anything too big

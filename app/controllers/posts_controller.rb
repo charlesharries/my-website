@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     @posts = Post.all.reverse
   end
 
+  def drafts
+    @posts = Post.where(published: false).reverse
+  end
+
   def work
     # .reverse so we get the most recent first
     @posts = Post.where(category: 'work').reverse
@@ -20,7 +24,7 @@ class PostsController < ApplicationController
 
   # category: 'experiment' posts
   def experiments
-    @posts = Post.where(category: 'experiment').reverse
+    @posts = Post.where(category: 'experiment', published: true).reverse
   end
 
   # Make a new post
@@ -31,6 +35,11 @@ class PostsController < ApplicationController
   # Save a new post into the database
   def create
     @post = current_user.posts.build(post_params)
+    if params[:commit] == "Publish post"
+      @post.published = true
+    else
+      @post.published = false
+    end
     if @post.save
       flash[:notice] = "The post was saved into the database"
       redirect_to post_path(@post)
@@ -48,6 +57,11 @@ class PostsController < ApplicationController
   # Saves the updates into the database
   # Logic for retrieving the post is below, see find_post method
   def update
+    if params[:commit] == "Publish post"
+      @post.published = true
+    else
+      @post.published = false
+    end
     if @post.update_attributes(post_params)
       flash[:notice] = "The post was updated successfully"
       redirect_to post_path(@post)
@@ -73,7 +87,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :subtitle, :category, :content, {pictures: []})
+      params.require(:post).permit(:title, :subtitle, :category, :content, :published, {pictures: []})
     end
 
     def find_post
