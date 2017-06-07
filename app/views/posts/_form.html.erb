@@ -36,6 +36,15 @@
     <%= f.button :submit %>
   </div>
 
+  <div class="pictures">
+    <h5>Available pictures:</h5>
+    <ul>
+      <% @post.pictures.each do |picture| %>
+        <li><%= picture.url %></li>
+      <% end %>
+    </ul>
+  </div>
+
   <script>
     // A little JS to make sure that you don't upload anything too big
     $('#post_pictures').bind('change', function() {
