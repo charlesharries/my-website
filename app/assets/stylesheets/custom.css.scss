@@ -63,10 +63,12 @@ a {
 li a {
   color: #333;
   position: relative;
-  &:hover, &:focus, &:active {
+  &:hover {
     color: $pink;
   }
-
+  &:active, &:focus {
+    color: lightblue;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -199,14 +201,11 @@ Home page
   display: flex;
   margin-top: 50px;
   ul {
-    display: inline-block;
+    display: flex;
     margin: 0 auto;
     li {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-      &:last-child {
-        margin-bottom: 0;
+      &:not(:last-child) {
+        margin-right: 40px;
       }
     }
   }
@@ -353,7 +352,7 @@ header {
 .save-button {
   background-color: #eee;
   border: 1px solid #ddd!important;
-  &:active {
+  &:active, &:focus {
     background-color: darken(#eee, 10%);
   }
 }
@@ -362,7 +361,7 @@ header {
   background-color: pink;
   border: 1px solid darken(pink, 5%)!important;
   color: white!important;
-  &:active {
+  &:active, &:focus {
     background-color: darken(pink, 10%);
   }
 }

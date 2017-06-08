@@ -5,26 +5,26 @@ class PostsController < ApplicationController
 
   # Get an index of all posts
   def index
-    @posts = Post.all.reverse
+    @posts = Post.published.reverse
   end
 
   def drafts
-    @posts = Post.where(published: false).reverse
+    @posts = Post.drafts.reverse
   end
 
   def work
     # .reverse so we get the most recent first
-    @posts = Post.where(category: 'work').reverse
+    @posts = Post.work.published.reverse
   end
 
   # category: 'opinion' posts
   def opinions
-    @posts = Post.where(category: 'opinion').reverse
+    @posts = Post.opinion.published.reverse
   end
 
   # category: 'experiment' posts
   def experiments
-    @posts = Post.where(category: 'experiment', published: true).reverse
+    @posts = Post.experiments.published.reverse
   end
 
   # Make a new post
