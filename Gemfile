@@ -31,6 +31,8 @@ gem 'carrierwave', github: 'carrierwaveuploader/carrierwave' # So we have access
 gem 'mini_magick'
 # Use fog for image upload in production
 gem 'fog'
+# For creating sitemaps
+gem 'sitemap-generator'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
