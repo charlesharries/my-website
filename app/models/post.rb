@@ -12,6 +12,8 @@ class Post < ApplicationRecord
   scope :published,   -> { where published: true }
   scope :drafts,      -> { where published: false }
 
+  attr_accessor :published
+
   private
 
     def picture_size
