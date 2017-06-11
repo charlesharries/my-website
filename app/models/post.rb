@@ -12,10 +12,6 @@ class Post < ApplicationRecord
   scope :published,   -> { where published: true }
   scope :drafts,      -> { where published: false }
 
-  def published=(arg)
-    self.update_attribute(:published, arg)
-  end
-
   private
 
     def picture_size
