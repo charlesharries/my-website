@@ -12,7 +12,9 @@ class Post < ApplicationRecord
   scope :published,   -> { where published: true }
   scope :drafts,      -> { where published: false }
 
-  attr_accessor :published
+  def published=(arg)
+    self.update_attribute(:published, arg)
+  end
 
   private
 
