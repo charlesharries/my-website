@@ -1,0 +1,29 @@
+/* Error messages */
+
+#error_explanation {
+  border: 1px solid crimson;
+  padding: 20px;
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      color: crimson;
+      &:before {
+        content: '- ';
+        color: crimson;
+      }
+    }
+  }
+}
+
+.error {
+  font-size: 0.875em;
+  color: crimson;
+}
+
+.alert {
+  color: crimson;
+}

@@ -1,0 +1,38 @@
+/* Footer */
+
+.footer {
+  background: #fafafa;
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-content {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.back-to {
+  height: 60px;
+  padding-top: 20px;
+  hr {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.footer ul {
+  display: flex;
+  font-size: 0.85em;
+  li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.links {
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+}

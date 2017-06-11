@@ -1,34 +1,9 @@
 $pink: #f4859b;
 
-/* Error messages */
-
-#error_explanation {
-  border: 1px solid crimson;
-  padding: 20px;
-  h2 {
-    margin: 0;
-    font-size: 1em;
-  }
-  ul {
-    padding-left: 20px;
-    li {
-      color: crimson;
-      &:before {
-        content: '- ';
-        color: crimson;
-      }
-    }
-  }
-}
-
-.error {
-  font-size: 0.875em;
-  color: crimson;
-}
-
-.alert {
-  color: crimson;
-}
+@import 'errors';
+@import 'form';
+@import 'footer';
+@import 'mobile_menu';
 
 /*
 ==========
@@ -39,7 +14,7 @@ General rules
 body {
   font-family: 'Merriweather', serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: calc(0.6em + 0.5vw);
   line-height: 1.6;
   letter-spacing: 0.04em;
   color: #333;
@@ -47,7 +22,6 @@ body {
 
 hr {
   width: 15%;
-  margin-left: 0;
   background-color: #aaa;
 }
 
@@ -141,6 +115,7 @@ pre {
   margin-bottom: 30px;
   background: #fafafa;
   border-radius: 2px;
+  overflow: scroll;
 }
 
 .full-width {
@@ -267,9 +242,14 @@ header {
   margin: 0 auto;
 }
 
+.list-wrap {
+  text-align: center;
+}
+
 .page-title {
   font-family: 'Merriweather', serif;
   font-weight: 300;
+  text-align: center;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
 }
@@ -279,132 +259,10 @@ header {
   margin-bottom: 20px;
 }
 
-/* Form styling */
-
-.form-content {
-  margin-top: 3em;
-  h2 {
-    margin-bottom: 0.5em;
-  }
-}
-
-.form-group {
-  margin-bottom: 15px;
-  label {
-    margin-right: 15px;
-  }
-  input[type="text"], textarea {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    outline: none;
-    border: none;
-    font-family: 'Merriweather', serif;
-    font-weight: 300;
-    letter-spacing: 0.0325em;
-    color: #333;
-  }
-  .post_subtitle input {
-    border-bottom: 1px solid $pink;
-    width: 70%;
-    font-size: 1em;
-  }
-  .post_title input {
-    margin-top: 0.5em;
-    border-bottom: 1px solid $pink;
-    width: 90%;
-    font-size: 3em;
-  }
-  .post_content textarea {
-    box-shadow: inset 0px 0px 25px #e5e5e5;
-    padding: 15px;
-    resize: none;
-    font-family: 'Cousine', monospace;
-    font-size: 0.875em;
-    letter-spacing: 0.0325em;
-    line-height: 1.6;
-    border: 1px solid $pink;
-  }
-}
-
-.available-pictures {
-  margin-top: 20px;
-  word-wrap: break-word;
-  h5 {
-    margin-bottom: 10px;
-  }
-}
-
-.button {
-  outline: none;
-  padding: 10px 20px;
-  padding-top: 12px; // because Cousine is a weird font I guess
-  font-size: 1em;
-  border-radius: 2px;
-  box-shadow: 0px 3px 5px #eee;
-  cursor: pointer;
-  font-family: 'Cousine', 'system-ui', sans-serif;
-  & + & {
-    margin-left: 20px;
-  }
-}
-
-.save-button {
-  background-color: #eee;
-  border: 1px solid #ddd!important;
-  &:active, &:focus {
-    background-color: darken(#eee, 10%);
-  }
-}
-
-.publish-button {
-  background-color: pink;
-  border: 1px solid darken(pink, 5%)!important;
-  color: white!important;
-  &:active, &:focus {
-    background-color: darken(pink, 10%);
-  }
-}
-
 /* Images */
 
 .picture {
   margin-bottom: 30px;
-}
-
-/* Footer */
-
-.footer {
-  background: #fafafa;
-  width: 100%;
-  margin-top: 60px;
-  display: flex;
-  align-items: center;
-}
-
-.footer-content {
-  width: 960px;
-  margin: 0 auto;
-}
-
-.back-to {
-  height: 60px;
-  padding-top: 20px;
-}
-
-.footer ul {
-  display: flex;
-  font-size: 0.85em;
-  li:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-.links {
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 // TODO media queries for less than 990px, so that images within posts don't wind up trailing off the page
