@@ -7,7 +7,7 @@
   bottom: 0;
   width: 100vw;
   text-align: right;
-  transform: translateY(86%);
+  transform: translateY(calc(100% - 70px));
   transition: 0.5s;
   .mobile-nav-button {
     position: absolute;
