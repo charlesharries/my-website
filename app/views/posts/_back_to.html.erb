@@ -1,10 +1,6 @@
 <div class="back-to">
-  <% if @post.category == 'experiment' %>
-    Back to <%= link_to 'experiments', experiments_path %>
-  <% elsif @post.category == 'opinion' %>
-    Back to <%= link_to 'experiments', experiments_path %>
-  <% end %>
-  <% if @post.title %>
+  Back to <%= link_to "all the other stuff I've written", posts_path %>
+  <% if @post.published %>
     <hr />
   <% end %>
 </div>

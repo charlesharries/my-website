@@ -1,5 +1,7 @@
 $(document).ready(function() {
-  $('.mobile-nav-button').on('click', function() {
-    $('body').toggleClass('show-mobile-nav');
+  console.log("the document is ready");
+  $(".mobile-nav-button").click(function() {
+    $("body").toggleClass("show-mobile-nav");
+    console.log("it clicked");
   });
 });
