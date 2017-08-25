@@ -4,6 +4,7 @@
   margin-top: 3em;
   h2 {
     margin-bottom: 0.5em;
+    color: #ccc;
   }
 }
 
@@ -18,7 +19,6 @@
     -moz-appearance: none;
     outline: none;
     border: none;
-    font-family: 'Merriweather', serif;
     font-weight: 300;
     letter-spacing: 0.0325em;
     color: #333;
@@ -35,7 +35,6 @@
     font-size: 3em;
   }
   .post_content textarea {
-    box-shadow: inset 0px 0px 25px #e5e5e5;
     padding: 15px;
     resize: none;
     font-family: 'Cousine', monospace;
@@ -62,7 +61,6 @@
   border-radius: 2px;
   box-shadow: 0px 3px 5px #eee;
   cursor: pointer;
-  font-family: 'Cousine', 'system-ui', sans-serif;
   & + & {
     margin-left: 20px;
   }

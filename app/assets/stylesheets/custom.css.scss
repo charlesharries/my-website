@@ -12,12 +12,16 @@ General rules
 */
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 300;
-  font-size: calc(0.7em + 0.5vw);
+  font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.04em;
   color: #333;
+}
+
+input, textarea, select, button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 hr {
@@ -45,19 +49,27 @@ li a {
   }
 }
 
+b, strong {
+  font-weight: 500;
+}
+
+i, em {
+  font-style: italic;
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   letter-spacing: 0.0325em;
 }
 
 h1 {
-  font-size: 2.75em;
+  font-size: 2.75rem;
   letter-spacing: 0.05em;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: 0.0325em;
   a {
@@ -66,12 +78,12 @@ h2 {
 }
 
 h3 {
-  font-size: 1.55em;
+  font-size: 1.55rem;
 }
 
 h4 {
   // Using this one for image captions/attributions
-  font-size: 0.55em;
+  font-size: 0.55rem;
   color: #aaa;
   margin-top: -30px;
   margin-bottom: 30px;
@@ -79,12 +91,12 @@ h4 {
 
 h5 {
   color: #aaa;
-  font-size: 1.35em;
+  font-size: 1.35rem;
   font-style: italic;
 }
 
 h6 {
-  font-size: 0.85em;
+  font-size: 0.85rem;
   color: #aaa;
 }
 
@@ -142,12 +154,14 @@ Home page
 */
 
 .content {
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -30px;
+  padding: 10px;
+  padding-top: 70px;
 }
 
 .text {
@@ -166,15 +180,25 @@ Home page
   }
   h1 {
     position: absolute;
-    top: 32%;
+    top: 38%;
     right: 0;
     left: 0;
+    letter-spacing: 0.5rem;
+  }
+}
+
+.desc--wrap {
+  margin-top: 50px;
+  .desc {
+    text-align: center;
   }
 }
 
 .nav {
   display: flex;
+  font-size: 1.15rem;
   margin-top: 50px;
+  font-weight: 500;
   ul {
     display: flex;
     margin: 0 auto;
@@ -247,12 +271,11 @@ header {
 }
 
 .page-title {
-  font-family: 'Merriweather', serif;
   font-weight: 300;
   text-align: center;
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
-  padding-bottom: 0.5em;
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid $pink;
 }
 
