@@ -198,6 +198,7 @@ Home page
   display: flex;
   font-size: 1.15rem;
   margin-top: 50px;
+  margin-bottom: 50px;
   font-weight: 500;
   ul {
     display: flex;
@@ -264,6 +265,7 @@ header {
 .container {
   max-width: 660px;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .list-wrap {

@@ -5,11 +5,11 @@ class PostsController < ApplicationController
 
   # Get an index of all posts
   def index
-    @posts = Post.published.reverse
+    @posts = Post.published.order("updated_at DESC");
   end
 
   def drafts
-    @posts = Post.drafts.reverse
+    @posts = Post.drafts.order("updated_at DESC");
   end
 
   def work
