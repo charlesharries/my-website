@@ -1,24 +1,3 @@
-# README
+# My very own site
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Nothing special. I figured I would put the site up on Github in case anyone wants to give it a look. Plus it'd be nice for Github to show the commits I make to the site. Make me look busier.

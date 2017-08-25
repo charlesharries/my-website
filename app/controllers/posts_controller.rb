@@ -35,11 +35,8 @@ class PostsController < ApplicationController
   # Save a new post into the database
   def create
     @post = current_user.posts.build(post_params)
-    if params[:commit] == "Publish post"
-      @post.update_attribute(:published, true)
-    else
-      @post.update_attribute(:published, false)
-    end
+    params[:commit] == "Publish post" ?
+      @post.update_attribute(:published, true) : @post.update_attribute(:published, false)
     if @post.save
       flash[:notice] = "The post was saved into the database"
       redirect_to post_path(@post)
@@ -57,11 +54,7 @@ class PostsController < ApplicationController
   # Saves the updates into the database
   # Logic for retrieving the post is below, see find_post method
   def update
-    if params[:commit] == "Publish post"
-      @post.published = true
-    else
-      @post.published = false
-    end
+    @post.published = params[:commit] == "Publish post" ? true : false
     if @post.update_attributes(post_params)
       flash[:notice] = "The post was updated successfully"
       redirect_to post_path(@post)
