@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://charlesharries.herokuapp.com"
+SitemapGenerator::Sitemap.default_host = "http://charlesharries.co.uk"
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
