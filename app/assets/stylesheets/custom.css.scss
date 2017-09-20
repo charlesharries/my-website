@@ -1,4 +1,5 @@
-$pink: #f4859b;
+$base-color: #ff1277;
+$secondary-color: #efa83c;
 
 @import 'errors';
 @import 'form';
@@ -11,12 +12,14 @@ General rules
 ==========
 */
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 300;
-  font-size: 16px;
   line-height: 1.6;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01rem;
   color: #333;
 }
 
@@ -25,8 +28,11 @@ input, textarea, select, button {
 }
 
 hr {
+  background-color: #ddd;
+  border: none;
+  height: 1px;
+  margin-left: 0;
   width: 15%;
-  background-color: #aaa;
 }
 
 em {
@@ -35,22 +41,22 @@ em {
 
 a {
   text-decoration: none;
-  color: $pink;
+  color: $base-color;
 }
 
 li a {
   color: #333;
   position: relative;
   &:hover {
-    color: $pink;
+    color: $base-color;
   }
   &:active, &:focus {
-    color: lightblue;
+    color: $secondary-color;
   }
 }
 
 b, strong {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 i, em {
@@ -176,7 +182,7 @@ Home page
     height: 300px;
     width: 300px;
     padding: 10px;
-    border: 0.5px solid $pink;
+    border: 0.5px solid $base-color;
   }
   h1 {
     position: absolute;
@@ -213,8 +219,24 @@ Home page
 
 /* Show page */
 
+.back a {
+  font-size: 0.85rem;
+}
+
 .blog-content {
-  margin-top: 80px;
+  margin-top: 60px;
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    text-transform: uppercase;
+  }
 }
 
 .post-body {
@@ -241,7 +263,7 @@ header {
 }
 
 .blue {
-  color: lightblue;
+  color: $secondary-color;
 }
 
 /* Notices */
@@ -252,7 +274,7 @@ header {
   margin-top: 20px;
   text-align: left;
   .notice {
-    color: lightblue;
+    color: $secondary-color;
 
   }
   .error {
@@ -269,16 +291,31 @@ header {
 }
 
 .list-wrap {
-  text-align: center;
+  text-align: left;
 }
 
 .page-title {
-  font-weight: 300;
-  text-align: center;
   margin-top: 1.2rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid $pink;
+  text-align: left;
+}
+
+.post-title {
+  text-transform: uppercase;
+  h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+  h6 {
+    color: #aaa;
+    font-size: 0.65rem;
+  }
+}
+
+.post-subtitle {
+  font-size: 0.85rem;
 }
 
 .read-more {
