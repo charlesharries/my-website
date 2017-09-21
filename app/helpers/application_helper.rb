@@ -1,16 +1,18 @@
 module ApplicationHelper
 
+  # If you want to use Pygments again, uncomment this
   # Define a new class to extend the Redcarpet HTML renderer
-  class HTMLwithPygments < Redcarpet::Render::HTML
-		def block_code(code, language)
-      options = { encoding: 'utf-8' }
-			Pygments.highlight(code, lexer: language, options: options)
-		end
+  # class HTMLwithPygments < Redcarpet::Render::HTML
+	# 	def block_code(code, language)
+  #     options = { encoding: 'utf-8' }
+	# 		Pygments.highlight(code, lexer: language, options: options)
+	# 	end
 
-	end
+	# end
 
+  # And replace 'Redcarpet::Render::HTML' with 'HTMLwithPygments'
   def markdown(text)
-    markdown = Redcarpet::Markdown.new(HTMLwithPygments,
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
       no_intra_emphasis: true,
       fenced_code_blocks: true,
       disable_indented_code_blocks: true,
