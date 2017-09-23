@@ -180,22 +180,22 @@ Home page
   text-align: center;
   position: relative;
   img {
-    height: 300px;
-    width: 300px;
-    padding: 10px;
+    height: 150px;
+    width: 150px;
+    padding: 5px;
     border: 0.5px solid $base-color;
   }
   h1 {
-    position: absolute;
-    top: 38%;
-    right: 0;
-    left: 0;
+    font-size: 2rem;
+    font-weight: 700;
     letter-spacing: 0.5rem;
+    margin-top: 40px;
+    text-transform: uppercase;
   }
 }
 
 .desc--wrap {
-  margin-top: 50px;
+  margin-top: 40px;
   .desc {
     text-align: center;
   }
@@ -216,6 +216,12 @@ Home page
       }
     }
   }
+}
+
+.nav--home li a {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
 /* Show page */
