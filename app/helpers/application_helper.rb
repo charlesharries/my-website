@@ -20,4 +20,12 @@ module ApplicationHelper
       footnotes: true)
     return markdown.render(text).html_safe
   end
+  
+  def page_title(title = "")
+    if title.empty?
+      "Charles Harries"
+    else
+      "CH | #{title}"
+    end
+  end
 end
