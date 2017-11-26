@@ -3,15 +3,17 @@
     <%= render 'posts/back_to' if @post %>
     <div class="links">
       <div class="external">
-        <ul>
-          <li class="blue"><em>Find me on...</em></li>
-          <li><%= link_to "Github", '#' %></li>
-          <li><%= link_to "LinkedIn", '#' %></li>
-          <li><%= link_to "Twitter", '#' %></li>
-          <li><%= link_to "Instagram", '#' %></li>
-        </ul>
+        <nav>
+          <ul>
+            <li class="blue"><em>Find me on...</em></li>
+            <li><%= link_to "Github", '#' %></li>
+            <li><%= link_to "LinkedIn", '#' %></li>
+            <li><%= link_to "Twitter", '#' %></li>
+            <li><%= link_to "Instagram", '#' %></li>
+          </ul>
+        </nav>
       </div>
-      <!-- 
+      <!--
       <div class="internal">
         <ul>
           <li><%= link_to "Home", root_url %></li>

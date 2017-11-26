@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController
     @image = "prof-#{index}.jpg"
   end
 
+  def contact
+  end
+
 end
