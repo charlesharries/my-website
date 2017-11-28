@@ -63,14 +63,8 @@ i, em {
   font-style: italic;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.4;
-  letter-spacing: 0.0325em;
-}
-
 h1 {
   font-size: 2.75rem;
-  letter-spacing: 0.05em;
   line-height: 1.2;
 }
 
@@ -186,11 +180,8 @@ Home page
     border: 0.5px solid $base-color;
   }
   h1 {
-    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 0.5rem;
     margin-top: 40px;
-    text-transform: uppercase;
   }
 }
 
@@ -233,10 +224,8 @@ Home page
 .blog-content {
   margin-top: 60px;
   h1 {
-    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
+    letter-spacing: 0;
   }
   h5 {
     font-size: 1rem;
@@ -330,6 +319,8 @@ header {
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   text-align: left;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .post-title {
@@ -361,3 +352,40 @@ header {
 }
 
 // TODO media queries for less than 990px, so that images within posts don't wind up trailing off the page
+
+/* Login Page, just for me */
+
+.container--login {
+  text-align: center;
+  h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  form {
+    margin-bottom: 20px;
+  }
+}
+
+.form-inputs > div {
+  margin-bottom: 10px;
+  label {
+    text-transform: uppercase;
+    color: #aaa;
+    font-size: 0.8rem;
+  }
+  input {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    outline: none;
+  }
+}
+
+/* Contact */
+
+.container--contact {
+  text-align: center;
+  h1 {
+    margin-bottom: 20px;
+  }
+}

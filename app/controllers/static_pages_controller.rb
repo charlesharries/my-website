@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
 
-  before_filter :disable_header, :disable_footer, only: [:home]
+  before_filter :disable_header, :disable_footer, only: [:home, :contact]
 
   def home
     index = Random.rand(Dir.glob("app/assets/images/profile_pictures/*").length) + 1

@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   get 'work',        to: 'posts#work'
   get 'opinions',    to: 'posts#opinions'
   get 'experiments', to: 'posts#experiments'
+  get 'contact',     to: 'static_pages#contact'
+
+  devise_scope :user do
+    get 'login',     to: 'devise/sessions#new'
+  end
 
   resources :posts
 end
