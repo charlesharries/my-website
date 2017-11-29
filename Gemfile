@@ -47,7 +47,8 @@ gem 'devise', '~> 4.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use pygments for syntax highlighting, because I don't want to just copy in frames from Github or wherever
-gem 'pygments.rb', '~> 0.6.3'
+# There's a security vulnerability in it anyway
+# gem 'pygments.rb', '~> 0.6.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
