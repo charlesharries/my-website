@@ -68,6 +68,11 @@
 }
 
 @media screen and (max-width: 700px) {
+  .back {
+    margin: 0 20px;
+    margin-bottom: 20px;
+  }
+
   .blog-content {
     margin-top: 0;
     h1, h2, h3, h4, h5, h6, p {
@@ -75,7 +80,7 @@
       margin-right: 20px;
     }
     p > img {
-      margin-left: -20px;
+      margin-left: -30px;
       width: 100vw;
     }
   }
@@ -97,5 +102,10 @@
 
   h1 {
     font-size: 1.7rem;
+  }
+
+  .page-title, .list-wrap {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
