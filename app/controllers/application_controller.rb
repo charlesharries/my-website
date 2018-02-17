@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   def redirect_www
   	if request.host == 'www.charlesharri.es'
-  		redirect_to 'https://charlesharri.es'
+  		redirect_to 'https://charlesharri.es' + request.fullpath, :status => 301
   	end
   end
 
