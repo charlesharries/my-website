@@ -19,8 +19,9 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.6;
-  // letter-spacing: 0.01rem;
   color: #003386;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 input, textarea, select, button {
@@ -129,6 +130,11 @@ pre {
   background: #fafafa;
   border-radius: 2px;
   overflow: scroll;
+}
+
+mark {
+  background: none;
+  color: orangered;
 }
 
 .full-width {

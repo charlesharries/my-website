@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
-  validates :title, :subtitle, :category, presence: true
+  validates :title, :subtitle, :category, :slug, presence: true
+  validates :slug, uniqueness: true
   validate :picture_size
 
   mount_uploaders :pictures, PictureUploader
@@ -11,6 +12,18 @@ class Post < ApplicationRecord
   scope :experiments, -> { where category: 'experiment' }
   scope :published,   -> { where published: true }
   scope :drafts,      -> { where published: false }
+
+  before_save do
+    self.slug = self.slug.parameterize
+  end
+
+  def to_param
+    slug
+  end
+  
+  def self.find(input)
+    find_by_slug(input)
+  end
 
   private
 

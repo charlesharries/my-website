@@ -8,6 +8,10 @@
   }
 }
 
+abbr {
+  text-decoration: none;
+}
+
 .form-group {
   margin-bottom: 15px;
   label {
@@ -23,7 +27,7 @@
     letter-spacing: 0.0325em;
     color: #333;
   }
-  .post_subtitle input {
+  .post_subtitle input, .post_slug input {
     border-bottom: 1px solid $base-color;
     width: 70%;
     font-size: 1em;

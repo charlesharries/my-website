@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   # Interesting that finding a post gets factored out and put up here... sort of smart actually
   before_action :find_post, only: [:edit, :update, :show, :destroy]
   before_action :authenticate_user!, except: [:index, :opinions, :experiments, :show]
+  
 
   # Get an index of all posts
   def index
@@ -30,6 +31,7 @@ class PostsController < ApplicationController
   # Make a new post
   def new
     @post = current_user.posts.build
+    @button_text = "Publish"
   end
 
   # Save a new post into the database
@@ -49,12 +51,15 @@ class PostsController < ApplicationController
   # Retrieves a post and renders the edit page
   # Logic for retrieving a post in factored into its own function, see find_post below
   def edit
+    @button_text = "Update"
   end
 
   # Saves the updates into the database
   # Logic for retrieving the post is below, see find_post method
   def update
-    @post.published = params[:commit] == "Publish post" ? true : false
+    @post.published = params[:commit] =~ /(Publish|Update)/ ? true : false
+    # Make sure the slug is URL-safe
+    @post.slug = params[:post][:slug].parameterize
     if @post.update_attributes(post_params)
       flash[:notice] = "The post was updated successfully"
       redirect_to post_path(@post)
@@ -80,10 +85,10 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :subtitle, :category, :content, :published, {pictures: []})
+      params.require(:post).permit(:title, :subtitle, :slug, :category, :content, :published, {pictures: []})
     end
 
     def find_post
-      @post = Post.find(params[:id])
+      @post = Post.find(params[:slug])
     end
 end

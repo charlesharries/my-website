@@ -17,7 +17,11 @@
   </div>
 
   <div class="form-group">
-    <%= f.input :subtitle, :input_html => { class: "form-control autoExpand" } %>
+    <%= f.input :subtitle, :input_html => { class: "form-control" } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :slug, :input_html => { class: "form-control" } %>
   </div>
 
   <div class="form-group">
@@ -34,7 +38,7 @@
 
   <div class="form-group">
     <%= f.submit "Save post as draft", class: "button save-button" %>
-    <%= f.submit "Publish post", class: "button publish-button" %>
+    <%= f.submit @button_text, class: "button publish-button" %>
   </div>
 
   <% if @post.pictures.any? %>

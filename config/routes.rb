@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     get 'login',     to: 'devise/sessions#new'
   end
 
-  resources :posts
+  resources :posts, param: :slug
 end
