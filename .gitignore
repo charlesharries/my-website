@@ -15,7 +15,7 @@
 /db/*.sqlite3-journal
 
 # Ignore development sitemaps
-# /public/sitemap.*
+/public/sitemap.*
 
 # Ignore all logfiles and tempfiles.
 /log/*
