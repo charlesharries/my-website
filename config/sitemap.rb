@@ -2,6 +2,14 @@
 SitemapGenerator::Sitemap.default_host = "https://charlesharri.es"
 SitemapGenerator::Sitemap.compress = false
 
+SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(fog_provider: 'AWS',
+                                         aws_access_key_id: ENV['S3_ACCESS_KEY'],
+                                         aws_secret_access_key: ENV['S3_SECRET_KEY'],
+                                         fog_directory: ENV['S3_BUCKET'],
+                                         fog_region: ENV['S3_REGION'])
+
+SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
+
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
   #
