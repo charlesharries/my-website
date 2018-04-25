@@ -28,6 +28,6 @@ SitemapGenerator::Sitemap.create do
   add posts_path
 
   Post.find_each do |post|
-    add post_path(post), lastmod: post.updated_at
+    add '/posts/' + post.slug, lastmod: post.updated_at
   end
 end
