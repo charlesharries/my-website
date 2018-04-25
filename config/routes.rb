@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'blog',        to: 'posts#index'
   get 'contact',     to: 'static_pages#contact'
 
-  get 'sitemap.xml'  to: redirect('https://s3.amazonaws.com/charlesharriesblog/sitemaps/sitemap.xml')
+  get 'sitemap.xml',  to: redirect('https://s3.amazonaws.com/charlesharriesblog/sitemaps/sitemap.xml')
 
   devise_scope :user do
     get 'login',     to: 'devise/sessions#new'
