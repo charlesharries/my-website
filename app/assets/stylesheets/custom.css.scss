@@ -129,7 +129,24 @@ pre {
   margin-bottom: 30px;
   background: #fafafa;
   border-radius: 2px;
-  overflow: scroll;
+  overflow: auto;
+}
+
+pre::-webkit-scrollbar {
+  width: 0;
+  height: 6px
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: rgba(0,51,134,1);
+}
+
+pre::-webkit-scrollbar-track {
+  background: #e4e4e4;
+}
+
+pre::-webkit-scrollbar-corner {
+  background: 0;
 }
 
 mark {
@@ -149,6 +166,11 @@ img {
 
 ol {
   list-style-type: lower-roman;
+  padding-left: 45px;
+  margin-bottom: 30px;
+}
+
+ul {
   padding-left: 45px;
   margin-bottom: 30px;
 }
