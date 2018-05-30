@@ -1,0 +1,43 @@
+.container--resume {
+	h1 {
+		margin-bottom: 45px;
+	}
+	h2 {
+		text-transform: uppercase;
+		font-size: 20px;
+		letter-spacing: 0.1em;
+		font-weight: 400;
+		margin-bottom: 15px;
+		color: $base-color;
+	}
+	ul {
+		padding-left: 30px;
+	}
+}
+
+.work-title {
+	h3 {
+		display: inline;
+		font-weight: 700;
+		font-size: 1rem;
+	}
+	p {
+		display: inline;
+	}
+}
+
+.work-time p {
+	margin-bottom: 0;
+	font-style: italic;
+}
+
+.work-content li {
+	position: relative;
+	&:before {
+		content: "-";
+		display: table;
+		position: absolute;
+		left: -20px;
+		top: -1px;
+	}
+}

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'drafts',      to: 'posts#drafts'
   get 'blog',        to: 'posts#index'
   get 'contact',     to: 'static_pages#contact'
+  get 'resume',      to: 'static_pages#resume'
 
   get 'sitemap.xml', to: redirect('https://s3.amazonaws.com/charlesharriesblog/sitemaps/sitemap.xml')
 
