@@ -124,19 +124,25 @@ code {
   border: 1px solid #f6f6f6;
   border-radius: 2px;
   padding: 3px;
+  color: orangered;
 }
 
 pre {
   font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
   font-size: 0.85rem;
-  width: 960px;
-  margin-left: -150px;
+  width: 660px;
   border: 1px solid #f6f6f6;
   padding: 20px;
   margin-bottom: 30px;
   background: #fafafa;
   border-radius: 2px;
   overflow: auto;
+}
+
+pre code {
+  font-size: 0.7rem;
+  color: #0c275f;
+  padding: 0;
 }
 
 pre::-webkit-scrollbar {
