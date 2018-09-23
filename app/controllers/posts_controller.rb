@@ -6,11 +6,11 @@ class PostsController < ApplicationController
 
   # Get an index of all posts
   def index
-    @posts = Post.published.order("published_at DESC");
+    @posts = Post.published.order("created_at DESC");
   end
 
   def drafts
-    @posts = Post.drafts.order("published_at DESC");
+    @posts = Post.drafts.order("created_at DESC");
   end
 
   def work
