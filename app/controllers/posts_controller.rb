@@ -37,7 +37,7 @@ class PostsController < ApplicationController
   # Save a new post into the database
   def create
     @post = current_user.posts.build(post_params)
-    params[:commit] == "Publish post" ?
+    params[:commit] == "Publish" ?
       @post.update_attribute(:published, true) : @post.update_attribute(:published, false)
     if @post.save
       flash[:notice] = "The post was saved into the database"
