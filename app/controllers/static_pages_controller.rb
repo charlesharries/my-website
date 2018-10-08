@@ -1,5 +1,4 @@
 class StaticPagesController < ApplicationController
-
   before_filter :disable_header, :disable_footer, only: [:home, :contact]
 
   def home
@@ -11,6 +10,15 @@ class StaticPagesController < ApplicationController
   end
 
   def resume
+  end
+
+  def toggle_dark_mode
+    session[:dark_mode] = session[:dark_mode] ? false : true
+    if !request.env['HTTP_REFERER'] || request.env['HTTP_REFERER'] = '#{root_url}/dark_mode'
+      redirect_to posts_path
+    else
+      redirect_back fallback_location: posts_path
+    end
   end
 
 end

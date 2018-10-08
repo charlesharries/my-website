@@ -32,7 +32,7 @@
 
   </head>
 
-  <body>
+  <body <%= session[:dark_mode] ? "class=dark" : '' %>>
     <%= render 'layouts/header' unless @disable_header %>
     <div class="notices">
       <p class="notice"><%= notice %></p>

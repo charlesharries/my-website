@@ -12,5 +12,10 @@
     <li><%= link_to "CV", resume_path %></li>
     <li><%= link_to "Blog", posts_path %></li>
     <li><%= link_to "Contact", contact_path %></li>
+    <% if session[:dark_mode] %>
+      <li class="light-mode"><%= link_to "Light Mode", dark_mode_path %></li>
+    <% else %>
+      <li class="dark-mode"><%= link_to "Dark Mode", dark_mode_path %></li>
+    <% end %>
   </ul>
 </nav>

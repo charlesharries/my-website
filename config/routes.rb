@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'blog',        to: 'posts#index'
   get 'contact',     to: 'static_pages#contact'
   get 'resume',      to: 'static_pages#resume'
+  get 'dark_mode',   to: 'static_pages#toggle_dark_mode'
 
   get 'sitemap.xml', to: redirect('https://s3.amazonaws.com/charlesharriesblog/sitemaps/sitemap.xml')
 

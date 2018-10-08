@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   # Interesting that finding a post gets factored out and put up here... sort of smart actually
   before_action :find_post, only: [:edit, :update, :show, :destroy]
   before_action :authenticate_user!, except: [:index, :opinions, :experiments, :show]
